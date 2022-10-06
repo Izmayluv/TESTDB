@@ -1,0 +1,11 @@
+C:\Users\pixam\source\repos\TESTDB\TESTDB\bin\Debug\TESTDB.exe.config
+C:\Users\pixam\source\repos\TESTDB\TESTDB\bin\Debug\TESTDB.exe
+C:\Users\pixam\source\repos\TESTDB\TESTDB\bin\Debug\TESTDB.pdb
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.csproj.AssemblyReference.cache
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.csproj.SuggestedBindingRedirects.cache
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Properties.Resources.resources
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.csproj.GenerateResource.cache
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.csproj.CoreCompileInputs.cache
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.exe
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.pdb
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Authorization.resources
