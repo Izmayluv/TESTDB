@@ -1,6 +1,6 @@
 ﻿namespace TESTDB
 {
-    partial class Authorization
+    partial class AuthorizationView
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -35,11 +35,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(181, 147);
+            this.button1.Location = new System.Drawing.Point(184, 154);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Sing in";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonAuthorization_Click);
             // 
@@ -57,16 +57,16 @@
             this.password.Size = new System.Drawing.Size(100, 20);
             this.password.TabIndex = 2;
             // 
-            // Authorization
+            // AuthorizationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 349);
+            this.ClientSize = new System.Drawing.Size(466, 349);
             this.Controls.Add(this.password);
             this.Controls.Add(this.login);
             this.Controls.Add(this.button1);
-            this.Name = "Authorization";
-            this.Text = "Form1";
+            this.Name = "AuthorizationView";
+            this.Text = "Authorization";
             this.ResumeLayout(false);
             this.PerformLayout();
 

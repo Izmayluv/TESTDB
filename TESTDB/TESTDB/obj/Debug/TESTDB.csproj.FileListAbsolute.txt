@@ -8,4 +8,7 @@ C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.csproj.GenerateResour
 C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.csproj.CoreCompileInputs.cache
 C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.exe
 C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.pdb
-C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Authorization.resources
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Views.AdministratorView.resources
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.AuthorizationView.resources
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Views.ClientView.resources
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Views.ManagerView.resources
