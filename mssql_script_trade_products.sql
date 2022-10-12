@@ -21,9 +21,7 @@ create table Producer
 go
 create table Photo
 (
-	photoID nvarchar(100) primary key,
-	photoName nvarchar(max) not null,
-	photoImage image not null
+	photoID nvarchar(100) primary key
 );
 go
 create table Product
@@ -43,3 +41,20 @@ create table Product
 	productStatus bit null,
 );
 
+/*
+drop table Product
+drop table Category
+drop table Supplier
+drop table Producer
+drop table Photo
+
+CREATE TABLE Employees
+(
+    Id int,
+    Name varchar(50) not null,
+    Photo varbinary(max) not null
+)
+ 
+INSERT INTO Employees (Id, Name, Photo) 
+SELECT 10, 'John', BulkColumn 
+FROM Openrowset( Bulk 'C:\photo.bmp', Single_Blob) as EmployeePicture
