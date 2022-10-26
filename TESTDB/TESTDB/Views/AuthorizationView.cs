@@ -13,15 +13,17 @@ namespace TESTDB
             InitializeComponent();
         }
 
-        Connection connection;
-        Commands commands;
+        private Commands commands;
+
+        public static string loginText;
+        public static string passwordText;
 
         private void buttonAuthorization_Click(object sender, EventArgs e)
         {
-            connection = new Connection();
             commands = new Commands();
 
-            connection.OpenConnection();
+            loginText = login.Text;
+            passwordText = password.Text;
 
             try
             {
@@ -33,31 +35,35 @@ namespace TESTDB
 
 
                     case 1:
-                        MessageBox.Show("Вы вошли как клиент");
+                        //MessageBox.Show("Вы вошли как клиент");
 
-                        ClientView clientView = new ClientView();
+                        var clientView = new ClientView();
+
                         this.Hide();
                         clientView.Show();
+
                         break;
 
 
                     case 2:
-                        MessageBox.Show("Вы вошли как менеджер");
+                        //MessageBox.Show("Вы вошли как менеджер");
 
-                        ManagerView managerView = new ManagerView();
+                        var managerView = new ManagerView();
 
                         this.Hide();
                         managerView.Show();
+
                         break;
 
 
                     case 3:
-                        MessageBox.Show("Вы вошли как админирстратор");
+                        //MessageBox.Show("Вы вошли как админирстратор");
 
-                        AdministratorView adminView = new AdministratorView();
+                        var adminView = new AdministratorView();
 
                         this.Hide();
                         adminView.Show();
+
                         break;
                 }
             }
@@ -66,7 +72,6 @@ namespace TESTDB
                 MessageBox.Show("Ошибка");
             }
 
-            connection.CloseConnection();
         }
     }
 }

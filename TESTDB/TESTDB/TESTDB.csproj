@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -120,6 +124,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ProductPhotos\B736H6.jpg" />
+    <Content Include="Resources\ProductPhotos\D735T5.jpg" />
+    <Content Include="Resources\ProductPhotos\E732R7.jpg" />
+    <Content Include="Resources\ProductPhotos\F573T5.jpg" />
+    <Content Include="Resources\ProductPhotos\G387Y6.jpg" />
+    <Content Include="Resources\ProductPhotos\H384H3.jpg" />
+    <Content Include="Resources\ProductPhotos\K437E6.jpg" />
+    <Content Include="Resources\ProductPhotos\R836H6.jpg" />
+    <Content Include="Resources\ProductPhotos\T793T4.jpg" />
+    <Content Include="Resources\zaglushka.jpg" />
+    <Content Include="Resources\ProductPhotos\А112Т4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

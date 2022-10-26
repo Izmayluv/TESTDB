@@ -19,7 +19,7 @@ namespace TESTDB.Views
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            AuthorizationView authorizationView = new AuthorizationView();
+            var authorizationView = new AuthorizationView();
             this.Hide();
             authorizationView.Show();
         }

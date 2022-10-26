@@ -12,3 +12,4 @@ C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Views.AdministratorVi
 C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.AuthorizationView.resources
 C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Views.ClientView.resources
 C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Views.ManagerView.resources
+C:\Users\pixam\source\repos\TESTDB\TESTDB\obj\Debug\TESTDB.Views.UserControl1.resources

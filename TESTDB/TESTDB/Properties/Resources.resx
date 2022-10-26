@@ -118,7 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="B736H6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\b736h6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D735T5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\d735t5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="E732R7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\e732r7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F573T5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\f573t5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="G387Y6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\g387y6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="H384H3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\h384h3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K437E6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\k437e6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R836H6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\r836h6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="T793T4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\t793t4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zaglushka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\zaglushka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="А112Т4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\productphotos\а112т4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
