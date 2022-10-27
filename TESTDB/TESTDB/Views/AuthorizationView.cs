@@ -73,5 +73,10 @@ namespace TESTDB
             }
 
         }
+
+        private void AuthorizationView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

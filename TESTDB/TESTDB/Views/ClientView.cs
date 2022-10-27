@@ -17,13 +17,21 @@ namespace TESTDB.Views
         private Connection connection;
         private string path = @"C:\Users\pixam\source\repos\TESTDB\TESTDB\Resources\";
 
-        private void dataFilling(int category)
+        private void dataFilling(int category, int sort, int discount, string search)
         {
             int countAll, index = 0;
             Bitmap bitmap;
             string photo;
             string sumPath;
             double cost, sale, costSale;
+
+            string[,] arrayDiscount = new string[,] 
+            {   
+                { "0", "100" }, 
+                { "0", "10" }, 
+                { "10", "15" }, 
+                { "15", "100" } 
+            };
 
 
             connection = new Connection();
@@ -33,12 +41,46 @@ namespace TESTDB.Views
             SqlCommand com = new SqlCommand(sqlCount, Connection._connection);
             countAll = (int)com.ExecuteScalar();
 
-            string query = "select *from Items, Manufacturer where Items.productProducer = Manufacturer.producerID";
+            string queryMain = "select * from Items, Manufacturer where Items.productProducer = Manufacturer.producerID ";
+
+            string filterSearch;
+
+            string filterDiscountStr;
+            
+            string filterSort;
+
+           // queryMain += filterDiscountStr;
+            
+
+            if (textBoxSearch.Text != String.Empty)
+            {
+                filterSearch = " and Items.productName like '%" + textBoxSearch.Text + "%' ";
+                queryMain += filterSearch;
+            }
+
+            if (discount != -1)
+            {
+                filterDiscountStr = " and Items.productMaxDiscountAmount between " + arrayDiscount[discount, 0] + " and "
+                + arrayDiscount[discount, 1];
+                queryMain += filterDiscountStr;
+            }
 
             if (category != 0)
-                query += $" and [Items].productCategory = {category}";
+                queryMain += $" and [Items].productCategory = {category} ";
 
-            var command = new SqlCommand(query, Connection._connection);
+            if (sort == 1)
+            {
+                filterSort = " order by Items.productCost ASC ";
+                queryMain += filterSort;
+            }
+
+            if (sort == 0)
+            {
+                filterSort = " order by Items.productCost DESC ";
+                queryMain += filterSort;
+            }
+
+            var command = new SqlCommand(queryMain, Connection._connection);
             var dataReader = command.ExecuteReader();
 
             dataGridViewProd.Rows.Clear();
@@ -75,7 +117,7 @@ namespace TESTDB.Views
                     description += "Производитель: " + dataReader ["productProducer"] + Environment.NewLine;
 
                     cost = Convert.ToDouble(dataReader["productCost"]);
-                    sale = Convert.ToDouble(dataReader["productDiscountAmount"]);
+                    sale = Convert.ToDouble(dataReader["productMaxDiscountAmount"]);
 
                     costSale = cost - sale / 100.00 * cost;
 
@@ -108,11 +150,23 @@ namespace TESTDB.Views
 
         private void ClientView_Load(object sender, EventArgs e)
         {
+
             Commands commands = new Commands();
             labelLog.Text = commands.getFIO(AuthorizationView.loginText, AuthorizationView.passwordText);
 
             comboBoxCategories.Items.Add("Все категории");
-            comboBoxCategories.Text = comboBoxCategories.Items[0].ToString();
+
+            comboBoxSort.Items.Add("По возрастанию");
+            comboBoxSort.Items.Add("По убыванию");
+
+            comboBoxDiscount.Items.Add("Не учитывается");
+            comboBoxDiscount.Items.Add("От 0 до 10");
+            comboBoxDiscount.Items.Add("От 10 до 15");
+            comboBoxDiscount.Items.Add("От 15 до 100");
+
+           /* comboBoxCategories.Text = comboBoxCategories.Items[0].ToString();
+            comboBoxDiscount.Text = comboBoxDiscount.Items[0].ToString();
+            comboBoxSort.Text = comboBoxSort.Items[0].ToString(); */
 
             connection = new Connection();
             connection.OpenConnection();
@@ -131,13 +185,31 @@ namespace TESTDB.Views
             
             connection.CloseConnection();
 
-            dataFilling(Convert.ToInt32(comboBoxCategories.SelectedIndex.ToString()));
+            dataFilling(Convert.ToInt32(comboBoxCategories.SelectedIndex.ToString()), Convert.ToInt32(comboBoxSort.SelectedIndex.ToString()), Convert.ToInt32(comboBoxDiscount.SelectedIndex.ToString()), textBoxSearch.Text);
 
         }
 
         private void comboBoxCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataFilling(Convert.ToInt32(comboBoxCategories.SelectedIndex.ToString()));
+            dataFilling(Convert.ToInt32(comboBoxCategories.SelectedIndex.ToString()),  Convert.ToInt32(comboBoxSort.SelectedIndex.ToString()), Convert.ToInt32(comboBoxDiscount.SelectedIndex.ToString()), textBoxSearch.Text);
+        }
+
+        private void comboBoxSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataFilling(Convert.ToInt32(comboBoxCategories.SelectedIndex.ToString()), Convert.ToInt32(comboBoxSort.SelectedIndex.ToString()), Convert.ToInt32(comboBoxDiscount.SelectedIndex.ToString()), textBoxSearch.Text);
+
+        }
+
+        private void comboBoxDiscount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataFilling(Convert.ToInt32(comboBoxCategories.SelectedIndex.ToString()), Convert.ToInt32(comboBoxSort.SelectedIndex.ToString()), Convert.ToInt32(comboBoxDiscount.SelectedIndex.ToString()), textBoxSearch.Text);
+
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            dataFilling(Convert.ToInt32(comboBoxCategories.SelectedIndex.ToString()), Convert.ToInt32(comboBoxSort.SelectedIndex.ToString()), Convert.ToInt32(comboBoxDiscount.SelectedIndex.ToString()), textBoxSearch.Text);
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
